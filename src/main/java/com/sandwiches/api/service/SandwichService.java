@@ -30,7 +30,10 @@ public class SandwichService {
 		return this.sandwichRep.findAll();
 	}
 	
-	public void createMenu() {
+	/**
+	 * This method creates the sandwiches menu
+	 */
+	private void createMenu() {
 		ingredientRep.saveAndFlush(new Ingredient(10l, IngredientType.ALFACE, 1));
 		ingredientRep.saveAndFlush(new Ingredient(11l, IngredientType.BACON, 1));
 		ingredientRep.saveAndFlush(new Ingredient(12l, IngredientType.HAMBURGER, 1));
@@ -41,7 +44,6 @@ public class SandwichService {
 		sandwichRep.saveAndFlush(new XBurger());
 		sandwichRep.saveAndFlush(new XEgg());
 		sandwichRep.saveAndFlush(new XEggBacon());
-
 	}
 }
 
