@@ -1,10 +1,10 @@
-package com.sandwiches.api.entity;
+package com.sandwiches.api.entity.enums;
 
 public enum IngredientType {
 
 	ALFACE("alface", 0.40),
 	BACON("bacon", 2.00),
-	CARNE("carne", 3.00),
+	HAMBURGER("hamburger", 3.00),
 	OVO("ovo", 0.80),
 	QUEIJO("queijo", 1.50);
 	
