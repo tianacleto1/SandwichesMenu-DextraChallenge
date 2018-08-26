@@ -1,19 +1,18 @@
 package com.sandwiches.api.entity;
 
-import javax.persistence.DiscriminatorValue;
-import javax.persistence.Entity;
-
 import com.sandwiches.api.entity.enums.IngredientType;
 
-@Entity
-@DiscriminatorValue("x_bacon")
 public class XBacon extends Sandwich {
 
 	public XBacon() {
+		this.code = 10l;
 		this.name = "X-Bacon";
-		this.ingredients.add(new Ingredient(11l, IngredientType.BACON, 1));
-	    this.ingredients.add(new Ingredient(12l, IngredientType.HAMBURGER, 1));
-	    this.ingredients.add(new Ingredient(14l, IngredientType.QUEIJO, 1));
-	    this.price = calculatePrice();
+		Ingredient bacon = new Ingredient(IngredientType.BACON, 1);
+		Ingredient hamburguer = new Ingredient(IngredientType.HAMBURGER, 1);
+		Ingredient queijo = new Ingredient(IngredientType.QUEIJO, 1);
+		
+		this.ingredients.add(bacon);
+	    this.ingredients.add(hamburguer);
+	    this.ingredients.add(queijo);
 	}
 }

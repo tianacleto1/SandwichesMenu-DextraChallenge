@@ -2,22 +2,10 @@ package com.sandwiches.api.entity;
 
 import java.util.List;
 
-import javax.persistence.ElementCollection;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.OneToMany;
-
-@Entity
 public class Order {
-	
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+
 	private Long code;
-	
-	@OneToMany
-	@ElementCollection(targetClass = Integer.class)
+
 	private List<Sandwich> sandwiches;
 	private double total;
 	
@@ -42,6 +30,6 @@ public class Order {
 	}
 	
 	public void calculateTotal(double total) {
-		sandwiches.forEach(s -> this.total += s.calculatePrice());
+		sandwiches.forEach(s -> this.total += s.getPrice());
 	}
 }
