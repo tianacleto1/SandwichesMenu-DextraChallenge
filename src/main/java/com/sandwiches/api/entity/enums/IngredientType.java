@@ -9,18 +9,18 @@ public enum IngredientType {
 	QUEIJO("queijo", 1.50);
 	
 	private String name;
-	private double price;
+	private double value;
 	
-	private IngredientType(String name, double price) {
+	private IngredientType(String name, double value) {
 		this.name = name;
-		this.price = price;
+		this.value = value;
 	}
 
 	public String getName() {
 		return name;
 	}
 
-	public double getPrice() {
-		return price;
+	public double getValue() {
+		return value;
 	}
 }

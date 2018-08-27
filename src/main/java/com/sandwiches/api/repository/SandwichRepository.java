@@ -21,6 +21,10 @@ public class SandwichRepository {
 		return this.db.getSandwiches().get(code);
 	}
 	
+	public void saveSandwich(Sandwich sandwich) {
+		this.db.getSandwiches().put(sandwich.getCode(), sandwich);
+	}
+	
 	public Collection<Sandwich> getAllSandwiches() {
 		return db.getSandwiches().values();
 	}

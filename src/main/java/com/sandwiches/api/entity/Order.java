@@ -30,6 +30,6 @@ public class Order {
 	}
 	
 	public void calculateTotal(double total) {
-		sandwiches.forEach(s -> this.total += s.getPrice());
+		sandwiches.forEach(sandwich -> this.total = sandwich.getPrice());
 	}
 }

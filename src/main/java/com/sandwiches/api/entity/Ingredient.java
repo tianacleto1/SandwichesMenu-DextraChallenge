@@ -3,6 +3,8 @@ package com.sandwiches.api.entity;
 import com.sandwiches.api.entity.enums.IngredientType;
 
 public class Ingredient {
+
+	public Ingredient() {}
 	
 	public Ingredient(IngredientType type, int quantity) {
 		this.ingredientType = type;
